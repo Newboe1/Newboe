@@ -52,7 +52,7 @@ const newsletterEmojis = ["😂", "🥺", "👍", "☺️", "🥹", "♥️", "�
  * @param {boolean} [isError=false] - Whether to use console.error.
  */
 function log(message, color = 'white', isError = false) {
-    const prefix = chalk.magenta.bold('[ NewBoe ]');
+    const prefix = chalk.magenta.bold('[ Mercedes ]');
     const logFunc = isError ? console.error : console.log;
     const coloredMessage = chalk[color](message);
     
@@ -280,7 +280,7 @@ function sessionExists() {
 async function checkEnvSession() {
     const envSessionID = process.env.SESSION_ID;
     if (envSessionID) {
-        if (!envSessionID.includes("NewBoe~")) { 
+        if (!envSessionID.includes("Mercedes~")) { 
             log("🚨 WARNING: Environment SESSION_ID is missing the required prefix 'NewBoe~'. Assuming BASE64 format.", 'red'); 
         }
         global.SESSION_ID = envSessionID.trim();
@@ -297,7 +297,7 @@ async function checkAndHandleSessionFormat() {
     
     if (sessionId && sessionId.trim() !== '') {
         // Only check if it's set and non-empty
-        if (!sessionId.trim().startsWith('NewBoe')) {
+        if (!sessionId.trim().startsWith('Mercedes')) {
             log(chalk.red.bgBlack('================================================='), 'white');
             log(chalk.white.bgRed('❌ ERROR: Invalid SESSION_ID in .env'), 'white');
             log(chalk.white.bgRed('The session ID MUST start with "NewBoe".'), 'white');
