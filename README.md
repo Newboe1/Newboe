@@ -1,1 +1,1 @@
-https://dashboard.heroku.com/new?team=rahman-xm&template=https%3A%2F%2Fgithub.com%2FNewboe1%2FNewboe
+https://dashboard.heroku.com/new?template=https://github.com/Newboe1/Newboe
